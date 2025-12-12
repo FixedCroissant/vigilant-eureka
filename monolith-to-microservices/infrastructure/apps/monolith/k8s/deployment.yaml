@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: mydjangoapp1
-          image: fixedcroissant/vigilanteureka_django_test:latest
+          image: fixedcroissant/vigilanteureka_django_test:v.0.0.3
           #Resources might not be necessary.
           resources:
             limits:
