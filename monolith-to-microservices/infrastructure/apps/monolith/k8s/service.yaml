@@ -7,5 +7,5 @@ spec:
     app: mydjangoapp1
   ports:
     #where we can access it on our host.
-    - port: 8090
+    - port: 8091
       targetPort: 8000
