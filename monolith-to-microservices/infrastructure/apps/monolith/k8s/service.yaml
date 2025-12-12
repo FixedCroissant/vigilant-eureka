@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mydjangoapp1
+spec:
+  selector:
+    app: mydjangoapp1
+  ports:
+    #where we can access it on our host.
+    - port: 8090
+      targetPort: 8000

@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mydjangoapp1
+spec:
+  selector:
+    matchLabels:
+      app: mydjangoapp1
+  template:
+    metadata:
+      labels:
+        app: mydjangoapp1
+    spec:
+      containers:
+        - name: mydjangoapp1
+          image: fixedcroissant/vigilanteureka_django_test:latest
+          #Resources might not be necessary.
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          ports:
+            #Where the app starts, in this case, line 8000
+            - containerPort: 8000
