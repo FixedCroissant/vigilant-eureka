@@ -22,3 +22,28 @@ spec:
           ports:
             #Where the app starts, in this case, line 8000
             - containerPort: 8000
+---
+# -- second application -- #
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mydjangoapp2-coc
+spec:
+  selector:
+    matchLabels:
+      app: mydjangoapp2-coc
+  template:
+    metadata:
+      labels:
+        app: mydjangoapp2-coc
+    spec:
+      containers:
+        - name: mydjangoapp2-coc
+          image: fixedcroissant/containerofcats:latest
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          ports:
+            # coc running on port 80
+            - containerPort: 80
