@@ -2,10 +2,11 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mydjangoapp1
+  namespace: myapp2
 spec:
+  type: ClusterIP
   selector:
-    app: mydjangoapp1
+    app: mydjangoapp1 #internal only.
   ports:
-    #where we can access it on our host.
     - port: 8091
       targetPort: 8000

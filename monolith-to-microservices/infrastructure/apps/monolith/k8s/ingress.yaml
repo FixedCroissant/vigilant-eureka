@@ -6,6 +6,8 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
+  ingressClassName: nginx
+  #CoC
   rules:
     - host: mydjangoapp1.local
       http:
@@ -14,6 +16,20 @@ spec:
             pathType: Prefix
             backend:
               service:
+                name: mydjangoapp1
+                port:
+                  number: 8091
+    # Second App Location.
+    # Basic App Number 2
+    - host: mydjangoapp2.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                #service name - may need to adjust
+                #todo: service-name-needs-to-be-updated
                 name: mydjangoapp1
                 port:
                   number: 8091
