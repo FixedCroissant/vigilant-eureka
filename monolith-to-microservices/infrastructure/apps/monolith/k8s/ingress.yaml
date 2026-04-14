@@ -16,9 +16,9 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: mydjangoapp1
+                name: mydjangoapp2-coc
                 port:
-                  number: 8091
+                  number: 8092
     # Second App Location.
     # Basic App Number 2
     - host: mydjangoapp2.local
