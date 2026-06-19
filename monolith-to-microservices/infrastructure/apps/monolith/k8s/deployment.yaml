@@ -47,26 +47,27 @@ spec:
           ports:
             # coc running on port 80
             - containerPort: 80
-  # -- third application -- #
-  apiVersion: apps/v1
-  kind: Deployment
-  metadata:
-    name: laravel1-app
-  spec:
-    selector:
-      matchLabels:
+---
+# -- third application -- #
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: laravel1-app
+spec:
+  selector:
+    matchLabels:
+      app: laravel1-app
+  template:
+    metadata:
+      labels:
         app: laravel1-app
-    template:
-      metadata:
-        labels:
-          app: laravel1-app
-    spec:
-      containers:
-        - name: laravel1-app
-          image: fixedcroissant/laravel-test:v1
-          resources:
-            limits:
-              memory: "128Mi"
-              cpu: "500m"
-          ports:
-            - containerPort: 8000
+  spec:
+    containers:
+      - name: laravel1-app
+        image: fixedcroissant/laravel-test:v1
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+          - containerPort: 8000
