@@ -52,18 +52,18 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: laravel1-app
+  name: laravel1app
 spec:
   selector:
     matchLabels:
-      app: laravel1-app
+      app: laravel1app
   template:
     metadata:
       labels:
-        app: laravel1-app
+        app: laravel1app
   spec:
     containers:
-      - name: laravel1-app
+      - name: laravel1app
         image: fixedcroissant/laravel-test:v1
         resources:
           limits:
