@@ -33,3 +33,14 @@ spec:
                 name: mydjangoapp1
                 port:
                   number: 8091
+    # Third App Location. PHP
+    - host: mylaravelapp1.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: mylaravelapp1
+                port:
+                  number: 8093
