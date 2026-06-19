@@ -62,7 +62,7 @@ spec:
           app: laravel1-app
     spec:
       containers:
-        - name: laravel-coc
+        - name: laravel1-app
           image: fixedcroissant/laravel-test:v1
           resources:
             limits:
