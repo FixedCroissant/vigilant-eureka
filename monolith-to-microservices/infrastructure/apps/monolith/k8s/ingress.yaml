@@ -41,6 +41,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: mylaravelapp1
+                name: laravel1-app
                 port:
                   number: 8093
