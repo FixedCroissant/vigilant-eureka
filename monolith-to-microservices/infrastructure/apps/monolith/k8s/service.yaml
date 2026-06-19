@@ -21,3 +21,14 @@ spec:
   ports:
     - port: 8092
       targetPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mylaravelapp1
+spec:
+  selector:
+    app: mylaravelapp1
+  ports:
+    - port: 8093
+      targetPort: 8000
