@@ -25,10 +25,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: mylaravelapp1
+  name: laravel1-app
 spec:
   selector:
-    app: mylaravelapp1
+    app: laravel1-app
   ports:
     - port: 8093
       targetPort: 8000
